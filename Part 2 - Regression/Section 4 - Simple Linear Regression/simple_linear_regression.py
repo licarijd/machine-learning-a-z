@@ -37,7 +37,11 @@ regressor.fit(X_train, y_train)
 y_pred = regressor.predict(X_test)
 
 # Visualising the Training set results
+
+# Scatter creates co-ordinates
 plt.scatter(X_train, y_train, color = 'red')
+
+# plot creates a line
 plt.plot(X_train, regressor.predict(X_train), color = 'blue')
 plt.title('Salary vs Experience (Training set)')
 plt.xlabel('Years of Experience')
@@ -46,6 +50,8 @@ plt.show()
 
 # Visualising the Test set results
 plt.scatter(X_test, y_test, color = 'red')
+
+# Use the line of best fit (model) be built using the training data
 plt.plot(X_train, regressor.predict(X_train), color = 'blue')
 plt.title('Salary vs Experience (Test set)')
 plt.xlabel('Years of Experience')
